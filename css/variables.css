@@ -126,10 +126,10 @@
     --bg: hsl(0, 0%, 100%);
     --fg: hsl(0, 0%, 0%);
 
-    --sidebar-bg: #fafafa;
-    --sidebar-fg: hsl(0, 0%, 0%);
+    --sidebar-bg: #660099;
+    --sidebar-fg: hsl(100, 100%, 100%);
     --sidebar-non-existant: #aaaaaa;
-    --sidebar-active: #1f1fff;
+    --sidebar-active: #2b79a2;
     --sidebar-spacer: #f4f4f4;
 
     --scrollbar: #8F8F8F;

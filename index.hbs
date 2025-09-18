@@ -138,11 +138,10 @@
 
         <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
             <!-- populated by js -->
-            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"><a href="https://www.manchester.ac.uk/"><img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png" alt="University of Manchester logo" style="width: calc(var(--sidebar-width)*0.92)"></a></mdbook-sidebar-scrollbox>
             <noscript>
                 <iframe class="sidebar-iframe-outer" src="{{ path_to_root }}toc.html"></iframe>
             </noscript>
-			<a href="https://www.manchester.ac.uk/"><img src="./img/uom_logo_white.png" alt="University of Manchester logo" style="width: calc(var(--sidebar-width)*0.92)"></a>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
@@ -155,9 +154,9 @@
                 <div id="mdbook-menu-bar-hover-placeholder"></div>
                 <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-					    <a href="https://www.manchester.ac.uk/"><img src="./img/uom_logo_white_background.png" alt="University of Manchester logo" style="width:100px; height:auto; padding-top: 10px;"></a>
+					    <a href="https://www.manchester.ac.uk/"><img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width:100px; height:auto; padding-top: 10px;"></a>
                         <label id="course-home-button" class="icon-button" title="Course home" aria-label="Course home" aria-controls="sidebar">
-                            <a href="https://uom-eee-eeen11202.github.io/"><i class="fa fa-home"></i></a></label>
+                            <a href="https://uom-eee-eeen11202.github.io/">{{fa "solid" "house"}}</a></label>
                         </label>
                         <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
                             {{fa "solid" "bars"}}
@@ -174,7 +173,7 @@
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
                         </ul>
                         <button id="font-toggle" class="icon-button" type="button" title="Change font" aria-label="Change font" aria-haspopup="true" aria-expanded="false" aria-controls="font-list">
-                            <i class="fa fa-font"></i>
+                            {{fa "solid" "font"}}
                         </button>
                         <ul id="font-list" class="font-popup" aria-label="Fonts" role="menu">
                             <li role="none"><button role="menuitem" class="font" id="font-roboto">Roboto (default)</button></li>
@@ -200,7 +199,7 @@
                         {{/if}}
                         {{#if git_repository_url}}
                         <a href="{{git_repository_url}}" title="Git repository" aria-label="Git repository">
-                            {{fa git_repository_icon_class git_repository_icon}}
+                            {{fa "brands" "github" "git_repository_icon"}}
                         </a>
                         {{/if}}
                         {{#if git_repository_edit_url}}
