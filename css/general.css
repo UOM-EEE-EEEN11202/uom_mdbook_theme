@@ -15,6 +15,7 @@ html {
 }
 
 
+
 html.font-roboto {
     font-family: "Roboto", sans-serif;
 }
@@ -30,6 +31,7 @@ html.font-opensans {
 html.font-times {
     font-family: "Times New Roman", Times, serif;
 }
+
 
 
 body {
@@ -98,18 +100,17 @@ h6:target::before {
 .page {
     outline: 0;
     padding: 0 var(--page-padding);
-    margin-block-start: calc(0px - var(--menu-bar-height)); /* Compensate for the #mdbook-menu-bar-hover-placeholder */
+    margin-block-start: calc(0px - var(--menu-bar-height)); /* Compensate for the #menu-bar-hover-placeholder */
 }
 .page-wrapper {
     box-sizing: border-box;
     background-color: var(--bg);
 }
-html:not(.js) .page-wrapper,
+.no-js .page-wrapper,
 .js:not(.sidebar-resizing) .page-wrapper {
     transition: margin-left 0.3s ease, transform 0.3s ease; /* Animation: slide away */
 }
-[dir=rtl]:not(.js) .page-wrapper,
-[dir=rtl].js:not(.sidebar-resizing) .page-wrapper {
+[dir=rtl] .js:not(.sidebar-resizing) .page-wrapper {
     transition: margin-right 0.3s ease, transform 0.3s ease; /* Animation: slide away */
 }
 
@@ -209,63 +210,16 @@ kbd {
     vertical-align: middle;
 }
 
-sup {
-    /* Set the line-height for superscript and footnote references so that there
-       isn't an awkward space appearing above lines that contain the footnote.
-
-       See https://github.com/rust-lang/mdBook/pull/2443#discussion_r1813773583
-       for an explanation.
-    */
-    line-height: 0;
+:not(.footnote-definition) + .footnote-definition,
+.footnote-definition + :not(.footnote-definition) {
+    margin-block-start: 2em;
 }
-
 .footnote-definition {
     font-size: 0.9em;
+    margin: 0.5em 0;
 }
-/* The default spacing for a list is a little too large. */
-.footnote-definition ul,
-.footnote-definition ol {
-    padding-left: 20px;
-}
-.footnote-definition > li {
-    /* Required to position the ::before target */
-    position: relative;
-}
-.footnote-definition > li:target {
-    scroll-margin-top: 50vh;
-}
-.footnote-reference:target {
-    scroll-margin-top: 50vh;
-}
-/* Draws a border around the footnote (including the marker) when it is selected.
-   TODO: If there are multiple linkbacks, highlight which one you just came
-   from so you know which one to click.
-*/
-.footnote-definition > li:target::before {
-    border: 2px solid var(--footnote-highlight);
-    border-radius: 6px;
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    bottom: -8px;
-    left: -32px;
-    pointer-events: none;
-    content: "";
-}
-/* Pulses the footnote reference so you can quickly see where you left off reading.
-   This could use some improvement.
-*/
-@media not (prefers-reduced-motion) {
-    .footnote-reference:target  {
-        animation: fn-highlight 0.8s;
-        border-radius: 2px;
-    }
-
-    @keyframes fn-highlight {
-        from {
-            background-color: var(--footnote-highlight);
-        }
-    }
+.footnote-definition p {
+    display: inline;
 }
 
 .tooltiptext {
@@ -295,11 +249,4 @@ sup {
 
 .result-no-output {
     font-style: italic;
-}
-
-.fa-svg svg {
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
-    margin-bottom: -0.1em;
 }
