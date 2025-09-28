@@ -12,6 +12,10 @@
     --code-font-size: 0.875em /* please adjust the ace font size accordingly in editor.js */
 }
 
+.font-opendyslexic {
+    --mono-font: "OpenDyslexicMono", "OpenDyslexic", "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
+}
+
 /* Themes */
 
 .ayu {
