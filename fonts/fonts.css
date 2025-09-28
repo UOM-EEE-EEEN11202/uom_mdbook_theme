@@ -38,7 +38,7 @@
     font-family: "OpenDyslexicMono";
     font-style: normal;
     font-weight: italic;
-    src: url("OpenDyslexicMono-Regular.otf") format('otf');
+    src: url("OpenDyslexicMono-Regular.otf") format('opentype');
 }
 
 
