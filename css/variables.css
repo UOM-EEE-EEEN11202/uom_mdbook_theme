@@ -131,10 +131,10 @@
     --bg: hsl(0, 0%, 100%);
     --fg: hsl(0, 0%, 0%);
 
-    --sidebar-bg: #fafafa;
-    --sidebar-fg: hsl(0, 0%, 0%);
+    --sidebar-bg: #660099;
+    --sidebar-fg: #FFF;
     --sidebar-non-existant: #aaaaaa;
-    --sidebar-active: #1f1fff;
+    --sidebar-active: #cccccc;
     --sidebar-spacer: #f4f4f4;
 
     --scrollbar: #8F8F8F;
