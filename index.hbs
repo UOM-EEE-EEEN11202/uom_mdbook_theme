@@ -138,10 +138,31 @@
             }
         </script>
 
+        <style>
+            .sidebar-uom-logo {
+                width: calc(var(--sidebar-width) * 0.9);
+            }
+
+            .sidebar-uom-logo-light {
+                display: none;
+            }
+
+            html.light .sidebar-uom-logo-light {
+                display: block;
+            }
+
+            html.light .sidebar-uom-logo-dark {
+                display: none;
+            }
+        </style>
+
         <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox">
-                <a href="https://www.manchester.ac.uk/"><img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png" alt="University of Manchester logo" style="width: calc(var(--sidebar-width)*0.9)"></a>
+                <a href="https://www.manchester.ac.uk/">
+                    <img class="sidebar-uom-logo sidebar-uom-logo-dark" src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_for_coloured_background/TAB_allwhite.png" alt="University of Manchester logo">
+                    <img class="sidebar-uom-logo sidebar-uom-logo-light" src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo">
+                </a>
             </mdbook-sidebar-scrollbox>
             <noscript>
                 <iframe class="sidebar-iframe-outer" src="{{ path_to_root }}toc.html"></iframe>
