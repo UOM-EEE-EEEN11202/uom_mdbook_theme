@@ -1,0 +1,7 @@
+pre, code {
+    white-space: pre-wrap;
+}
+
+figcaption {
+  text-align: center;
+}
